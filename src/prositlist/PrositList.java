@@ -15,11 +15,11 @@ public class PrositList {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       // TODO code application logic here
-        Etudiant E1 = new Etudiant(3,"Bacine", "Khouini");
-        Etudiant E2 = new Etudiant(1,"Zacine", "Khouini");
-        Etudiant E3 = new Etudiant(2,"Yacine", "Khouini");
-        
+        // TODO code application logic here
+        Etudiant E1 = new Etudiant(3, "Bacine", "Khouini");
+        Etudiant E2 = new Etudiant(1, "Zacine", "Khouini");
+        Etudiant E3 = new Etudiant(2, "Yacine", "Khouini");
+
         EspritArrayList Esprit = new EspritArrayList();
         Esprit.ajouterEtudiant(E1);
         Esprit.ajouterEtudiant(E2);
@@ -32,7 +32,7 @@ public class PrositList {
         System.out.println("\nTri par nom\n");
         Esprit.trierEtudiantsParNom();
         Esprit.displayEtudiants();
-        
+
     }
-    
+
 }

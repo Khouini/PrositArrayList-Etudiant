@@ -14,7 +14,12 @@ import java.util.Collections;
  */
 public class EspritArrayList implements University {
 
-    ArrayList<Etudiant> StudentsArray = new ArrayList<Etudiant>(); // Create an ArrayList object
+    ArrayList<Etudiant> StudentsArray;
+
+    public EspritArrayList() {
+        StudentsArray = new ArrayList<Etudiant>(); // Create an ArrayList object
+
+    }
 
     @Override
     public void ajouterEtudiant(Etudiant e) {
@@ -23,22 +28,28 @@ public class EspritArrayList implements University {
 
     @Override
     public boolean rechercherEtudiant(Etudiant e) {
-        for (int i = 0; i < StudentsArray.size(); i++) {
+        /*for (int i = 0; i < StudentsArray.size(); i++) {
             if (StudentsArray.get(i).equals(e)) {
                 return true;
             }
         }
-        return false;
+        return false;*/
+        return StudentsArray.contains(e);
     }
 
     @Override
     public boolean rechercherEtudiant(String nom) {
-        for (int i = 0; i < StudentsArray.size(); i++) {
+        /*for (int i = 0; i < StudentsArray.size(); i++) {
             if (StudentsArray.get(i).getNom().equals(nom)) {
                 return true;
             }
         }
-        return false;
+        return false;*/
+        for (Etudiant e : StudentsArray) {
+            if (e.getNom().equals(nom)) {
+                return true;
+            }
+        }
     }
 
     @Override
@@ -51,7 +62,7 @@ public class EspritArrayList implements University {
 
     @Override
     public void displayEtudiants() {
-        System.out.println(StudentsArray.toString());
+        System.out.println(StudentsArray);
     }
 
     @Override
